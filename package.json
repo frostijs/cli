@@ -1,6 +1,6 @@
 {
   "name": "@frosti/cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Frosti Command Line Interface",
   "author": "Jesse Weed <code@jesseweed.com>",
   "homepage": "http://frosti.js.org",
