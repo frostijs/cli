@@ -12,7 +12,7 @@ module.exports = config => {
       let licenseDomain = "";
       let licenseHolder = "";
 
-      console.log(`\n${emoji.construction_worker}  Copying dotfiles`);
+      console.log(`${emoji.construction_worker}  Copying dotfiles`);
 
       exec(`git clone ${config.repos.dotfiles} ${id}/dotfiles`, err => {
         fs.copy(`${id}/dotfiles/dotfiles`, `${id}/`);
