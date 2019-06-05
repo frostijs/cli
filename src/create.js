@@ -1,6 +1,5 @@
 // PACKAGES
 const _ = require("lodash");
-const clear = require("clear");
 const CLI = require("clui");
 const colors = require("colors");
 const fs = require("fs-extra");
@@ -38,8 +37,6 @@ module.exports = config => {
       fs.remove(`${id}`);
     } catch (e) {}
   };
-
-  clear();
 
   console.log(
     `\n${emoji.nerd}  Making sure I can write to ${"/".blue +
