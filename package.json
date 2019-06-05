@@ -12,8 +12,9 @@
     "frosti": "bin/frosti.js"
   },
   "scripts": {
-    "dev": "echo started dev",
-    "start": "echo booya"
+    "publish:major": "npm version major && npm publish",
+    "publish:minor": "npm version minor && npm publish",
+    "publish:patch": "npm version major && npm publish"
   },
   "dependencies": {
     "clui": "^0.3.6",
