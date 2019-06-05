@@ -1,6 +1,6 @@
 {
   "name": "@frosti/cli",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "Frosti Command Line Interface",
   "author": "Jesse Weed <code@jesseweed.com>",
   "homepage": "http://frosti.js.org",
@@ -14,7 +14,7 @@
   "scripts": {
     "publish:major": "npm version major && npm publish",
     "publish:minor": "npm version minor && npm publish",
-    "publish:patch": "npm version major && npm publish"
+    "publish:patch": "npm version patch && npm publish"
   },
   "dependencies": {
     "clui": "^0.3.6",
