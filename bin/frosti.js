@@ -6,28 +6,34 @@ const { exec, spawn } = require("child_process");
 const path = require("path");
 
 const ROOT_DIR = path.resolve(__dirname, "../");
+const CURRENT_DIR = process.cwd();
+
 const pkg = require(`${ROOT_DIR}/package.json`);
-const start = require(`${ROOT_DIR}/src/start`);
+const start = require(`${ROOT_DIR}/src/start.js`);
 
 const startNpm = () => {
   let script = false;
 
-  if (pkg.scripts.dev) script = pkg.scripts.dev;
-  else if (pkg.scripts.start) script = pkg.scripts.start;
+  const clientPKG = require(`${CURRENT_DIR}/package.json`);
+
+  if (clientPKG.scripts.dev) script = clientPKG.scripts.dev;
+  else if (clientPKG.scripts.start) script = clientPKG.scripts.start;
 
   if (script) {
     exec(script, (err, stdout, stderr) => {
       if (err) {
-        console.error(`exec error: ${err}`);
-      } else if (stderr) console.log(stderr);
-      else if (stdout) console.log(stdout);
+        console.error(err);
+        return;
+      }
+      if (stderr) console.log(stderr);
+      if (stdout) console.log(stdout);
     });
   }
 };
 
 // OUTPUT VERSION
 if (argv.v || argv.V || argv.version) {
-  console.log(argv, pkg.version);
+  console.log(pkg.version);
 
   // BUILD APP
 } else {
