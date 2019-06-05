@@ -100,7 +100,7 @@ module.exports = config => {
           countdown.start();
 
           // CLONE REPO
-          exec(`git clone ${config.repos.react} ${id}`, err => {
+          exec(`git clone ${config.repos[config.library]} ${id}`, err => {
             countdown.stop();
 
             dotfiles(config)
@@ -221,7 +221,9 @@ module.exports = config => {
                   // INSTALL SCRIPTS
                   if (config.install) {
                     console.log(
-                      `${emoji.cyclone}  Installing client dependencies with ${
+                      `\n${
+                        emoji.cyclone
+                      }  Installing client dependencies with ${
                         config.package
                       } (sit tight, this might take a sec).`.white
                     );
@@ -248,7 +250,7 @@ module.exports = config => {
                         } else {
                           if (_.includes(config.hosting, "firebase")) {
                             console.log(
-                              `${
+                              `\n${
                                 emoji.cyclone
                               }  Installing server dependencies with ${
                                 config.package
