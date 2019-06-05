@@ -4,7 +4,7 @@ const clear = require("clear");
 const CLI = require("clui");
 const colors = require("colors");
 const fs = require("fs-extra");
-const { exec, spawn } = require("child_process");
+const { exec } = require("child_process");
 const jsonfile = require("jsonfile");
 const log = require("single-line-log").stdout;
 const path = require("path");
@@ -232,8 +232,8 @@ module.exports = config => {
                     if (config.gifs) {
                       let gifs = [];
 
-                      fs.readdirSync(`${ROOT_DIR}/gifs/`).forEach(file => {
-                        gifs.push(`${ROOT_DIR}/gifs/${file}`);
+                      fs.readdirSync(`${ROOT_DIR}/src/_gifs/`).forEach(file => {
+                        gifs.push(`${ROOT_DIR}/src/_gifs/${file}`);
                       });
 
                       gif(gifs[Math.floor(Math.random() * gifs.length)]);

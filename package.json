@@ -9,10 +9,13 @@
   "main": "frosti.js",
   "license": "MIT",
   "bin": {
-    "frosti": "frosti.js"
+    "frosti": "bin/frosti.js"
+  },
+  "scripts": {
+    "dev": "echo started dev",
+    "start": "echo booya"
   },
   "dependencies": {
-    "clear": "^0.0.1",
     "clui": "^0.3.6",
     "colors": "^1.1.2",
     "figlet": "^1.2.0",

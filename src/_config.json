@@ -5,7 +5,7 @@
     "domain": "my-app.com",
     "firebase": "my-app",
     "id": "my-app",
-    "library": "react",
+    "library": null,
     "name": "My App",
     "shortName": "My App",
     "github": "my-app",
