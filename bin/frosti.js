@@ -3,10 +3,11 @@
 // IMPORTS
 const argv = require("minimist")(process.argv.slice(2));
 const { exec, spawn } = require("child_process");
-const pkg = require("../package.json");
+const path = require("path");
 
-// LIB
-const start = require("../src/start");
+const ROOT_DIR = path.resolve(__dirname, "../");
+const pkg = require(`${ROOT_DIR}/package.json`);
+const start = require(`${ROOT_DIR}/src/start`);
 
 const startNpm = () => {
   let script = false;

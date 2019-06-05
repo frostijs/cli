@@ -18,7 +18,6 @@
     "config": "git@github.com:frostijs/config.git",
     "dotfiles": "git@github.com:frostijs/dotfiles.git",
     "eslint-config-base": "git@github.com:frostijs/eslint-config-base.git",
-    "licenses": "git@github.com:frostijs/licenses.git",
     "react": "git@github.com:frostijs/react.git",
     "vanilla": "git@github.com:frostijs/vanilla.git"
   },
