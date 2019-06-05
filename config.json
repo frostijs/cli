@@ -1,0 +1,42 @@
+{
+  "gifs": true,
+  "default": {
+    "copyright": "ACME",
+    "domain": "my-app.com",
+    "firebase": "my-app",
+    "id": "my-app",
+    "library": "react",
+    "name": "My App",
+    "shortName": "My App",
+    "github": "my-app",
+    "license": "MIT"
+  },
+  "setup": {
+    "name": "Frosti"
+  },
+  "repos": {
+    "config": "git@github.com:frostijs/config.git",
+    "dotfiles": "git@github.com:frostijs/dotfiles.git",
+    "eslint-config-base": "git@github.com:frostijs/eslint-config-base.git",
+    "licenses": "git@github.com:frostijs/licenses.git",
+    "react": "git@github.com:frostijs/react.git",
+    "vanilla": "git@github.com:frostijs/vanilla.git"
+  },
+  "replace": {
+    "author": "Jesse Weed <code@jesseweed.com>",
+    "deploy": "run-p copy deploy:firebase",
+    "description": "Frosti Boilerplate Starter Site",
+    "domain": "pug.js.org",
+    "github": "github.com/pug",
+    "id": "@pug",
+    "license": "MIT",
+    "name": "Frosti Boilerplate",
+    "shortName": "Frosti",
+    "package": "npm",
+    "license": {
+      "holder": "<COPYRIGHT_HOLDER>",
+      "website": "<COPYRIGHT_WEBSITE>",
+      "year": "<COPYRIGHT_YEAR>"
+    }
+  }
+}
