@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+
+- Don't clear console
+
 ## 0.1.2
 
 - Remove src from .npmignore
